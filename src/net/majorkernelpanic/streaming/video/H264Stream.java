@@ -124,6 +124,9 @@ public class H264Stream extends VideoStream {
 	private MP4Config testMediaCodecAPI() throws RuntimeException, IOException {
 		createCamera();
 		updateCamera();
+		mMode = MODE_MEDIARECORDER_API;
+		return testH264();
+		/*
 		try {
 			if (mQuality.resX>=640) {
 				// Using the MediaCodec API with the buffer method for high resolutions is too slow
@@ -137,6 +140,7 @@ public class H264Stream extends VideoStream {
 			mMode = MODE_MEDIARECORDER_API;
 			return testH264();
 		}
+		*/
 	}
 
 	// Should not be called by the UI thread
