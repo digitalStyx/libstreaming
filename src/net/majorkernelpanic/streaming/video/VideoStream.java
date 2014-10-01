@@ -82,6 +82,10 @@ public abstract class VideoStream extends MediaStream {
 	protected int mCameraImageFormat;
 	protected int mMaxFps = 0;	
 
+	public Camera getCurrentCamera() {
+		return mCamera;
+	}
+	
 	/** 
 	 * Don't use this class directly.
 	 * Uses CAMERA_FACING_BACK by default.
